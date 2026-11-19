@@ -40,4 +40,13 @@ public class SpringDataFxCs8Application implements CommandLineRunner {
 
         personRepository.save(person);
     }
+
+    public void printData(){
+        System.out.println("Printing on backend...");
+    }
+
+    public Person getPerson(){
+        Person person = personRepository.findAll().get(0);
+        return person;
+    }
 }
